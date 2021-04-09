@@ -1,5 +1,6 @@
 from rest_framework.permissions import BasePermission, SAFE_METHODS
 
+
 class IsOwnerOrStaffReadOnly(BasePermission):
 
     def has_object_permission(self, request, obj):
@@ -8,4 +9,3 @@ class IsOwnerOrStaffReadOnly(BasePermission):
             request.user and
             request.user.is_authenticated and (obj.owner == request.user or request.user.is_staff)
         )
-

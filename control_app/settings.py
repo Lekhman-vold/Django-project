@@ -86,6 +86,7 @@ DATABASES = {
         'PASSWORD': 'voloda2000',
         'HOST': 'localhost',
         'PORT': '5432',
+
     }
 }
 
